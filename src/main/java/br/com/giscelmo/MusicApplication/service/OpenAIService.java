@@ -7,10 +7,10 @@ import org.springframework.web.client.RestClient;
 import java.util.Map;
 
 @Service
-public class ConsultaChatGPT {
+public class OpenAIService {
     private final RestClient restClient;
 
-    public ConsultaChatGPT(OpenAiConfigApi config) {
+    public OpenAIService(OpenAiConfigApi config) {
 
         this.restClient = RestClient.builder()
                 .baseUrl(config.getUrl())

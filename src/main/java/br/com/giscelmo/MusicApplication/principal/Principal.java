@@ -6,7 +6,7 @@ import br.com.giscelmo.MusicApplication.model.Musica;
 import br.com.giscelmo.MusicApplication.model.TipoArtista;
 import br.com.giscelmo.MusicApplication.repository.ArtistaRepository;
 import br.com.giscelmo.MusicApplication.repository.MusicaRepository;
-import br.com.giscelmo.MusicApplication.service.ConsultaChatGPT;
+import br.com.giscelmo.MusicApplication.service.OpenAIService;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -17,11 +17,11 @@ import java.util.Scanner;
 public class Principal {
     private ArtistaRepository artistaRepository;
     private MusicaRepository musicaRepository;
-    private final ConsultaChatGPT consultaChatGPT;
+    private final OpenAIService consultaChatGPT;
 
 
 
-    public Principal(ArtistaRepository artistaRepository, MusicaRepository musicaRepository, ConsultaChatGPT consultaChatGPT) {
+    public Principal(ArtistaRepository artistaRepository, MusicaRepository musicaRepository, OpenAIService consultaChatGPT) {
         this.artistaRepository = artistaRepository;
         this.musicaRepository = musicaRepository;
         this.consultaChatGPT = consultaChatGPT;
